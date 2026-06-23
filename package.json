@@ -19,16 +19,18 @@
     "prisma": "^7.5.0"
   },
   "scripts": {
-    "db:migrate": "prisma migrate dev",
-    "db:migrate:deploy": "prisma migrate deploy",
-    "db:studio": "prisma studio",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push",
-    "prisma": "prisma",
-    "dev": "node src/app.js",
-    "debug": "node --inspect src/app.js",
-    "smoke:prisma": "node scripts/prisma-smoke.js"
-  },
+  "start": "node src/app.js",
+  "postinstall": "prisma generate",
+  "db:migrate": "prisma migrate dev",
+  "db:migrate:deploy": "prisma migrate deploy",
+  "db:studio": "prisma studio",
+  "db:generate": "prisma generate",
+  "db:push": "prisma db push",
+  "prisma": "prisma",
+  "dev": "node src/app.js",
+  "debug": "node --inspect src/app.js",
+  "smoke:prisma": "node scripts/prisma-smoke.js"
+},
   "pnpm": {
     "onlyBuiltDependencies": [
       "@prisma/engines",
